@@ -1,7 +1,7 @@
 # test coverage for  [node-cache (v4.1.1)](https://github.com/mpneuried/nodecache)  [![npm package](https://img.shields.io/npm/v/npmtest-node-cache.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-node-cache) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-node-cache.svg)](https://travis-ci.org/npmtest/node-npmtest-node-cache)
 #### Simple and fast NodeJS internal caching. Node internal in memory cache like memcached.
 
-[![NPM](https://nodei.co/npm/node-cache.png?downloads=true)](https://www.npmjs.com/package/node-cache)
+[![NPM](https://nodei.co/npm/node-cache.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/node-cache)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-node-cache/tree/alpha)|
 |--:|:--|
@@ -9,11 +9,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-node-cache/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-node-cache/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-node-cache/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-node-cache/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-node-cache/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-node-cache/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-node-cache/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-node-cache/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-node-cache/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-node-cache%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-node-cache/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-node-cache/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-node-cache/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-node-cache/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-node-cache%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-node-cache/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-node-cache/build/test-report.html](https://npmtest.github.io/node-npmtest-node-cache/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-node-cache/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-node-cache/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-node-cache/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-node-cache/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-node-cache/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-node-cache/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-node-cache/build/screenCapture.npmPackageListing.svg)
 
@@ -27,8 +33,7 @@
 
 {
     "author": {
-        "name": "mpneuried",
-        "email": "mp@tcs.de"
+        "name": "mpneuried"
     },
     "bugs": {
         "url": "https://github.com/mpneuried/nodecache/issues"
@@ -81,13 +86,11 @@
     "main": "./index.js",
     "maintainers": [
         {
-            "name": "tcs-de",
-            "email": "github@tcs.de"
+            "name": "tcs-de"
         }
     ],
     "name": "node-cache",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/mpneuried/nodecache.git"
