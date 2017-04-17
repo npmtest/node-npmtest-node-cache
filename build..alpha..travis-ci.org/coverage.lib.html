@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-node-cache/node-cache/lib/node_cache.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-node-cache/node_modules/node-cache/lib/node_cache.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-node-cache">npmtest-node-cache (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-node-cache/node-cache/lib/node_cache.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-node-cache/node_modules/node-cache/lib/node_cache.js</span></h1>
     <h2>
         
         Statements: <span class="metric">15.13% <small>(46 / 304)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-node-cache/node-cache/lib/</a> » node_cache.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-node-cache/node_modules/node-cache/lib/</a> &#187; node_cache.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -1185,11 +1187,11 @@
 */
 (function() {
   var EventEmitter, NodeCache, _assignIn, _isArray, _isFunction, _isNumber, _isObject, _isString, _size, _template, clone,
-    bind = <span class="fstat-no" title="function not covered">function(fn, me){</span> <span class="cstat-no" title="statement not covered">return <span class="fstat-no" title="function not covered">function(){</span> <span class="cstat-no" title="statement not covered">return fn.apply(me, arguments); </span>}; </span>},
-    extend = function(child, parent) { for (var key in parent) { <span class="missing-if-branch" title="else path not taken">E</span>if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    bind = <span class="fstat-no" title="function not covered" >function(fn, me){</span> <span class="cstat-no" title="statement not covered" >return <span class="fstat-no" title="function not covered" >function(){</span> <span class="cstat-no" title="statement not covered" >return fn.apply(me, arguments); </span>}; </span>},
+    extend = function(child, parent) { for (var key in parent) { <span class="missing-if-branch" title="else path not taken" >E</span>if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty,
     slice = [].slice,
-    indexOf = [].indexOf || <span class="fstat-no" title="function not covered"><span class="branch-1 cbranch-no" title="branch not covered">function(item) {</span> <span class="cstat-no" title="statement not covered">for (var i = 0, l = this.length; i &lt; l; i++) { <span class="cstat-no" title="statement not covered">if (i in this &amp;&amp; this[i] === item) <span class="cstat-no" title="statement not covered">return i; </span></span>} <span class="cstat-no" title="statement not covered"></span>return -1; </span>};</span>
+    indexOf = [].indexOf || <span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >function(item) {</span> <span class="cstat-no" title="statement not covered" >for (var i = 0, l = this.length; i &lt; l; i++) { <span class="cstat-no" title="statement not covered" >if (i in this &amp;&amp; this[i] === item) <span class="cstat-no" title="statement not covered" >return i; </span></span>} <span class="cstat-no" title="statement not covered" ></span>return -1; </span>};</span>
 &nbsp;
   _assignIn = require("lodash/assignIn");
 &nbsp;
@@ -1214,28 +1216,28 @@
   module.exports = NodeCache = (function(superClass) {
     extend(NodeCache, superClass);
 &nbsp;
-<span class="fstat-no" title="function not covered">    function NodeCache(options) {</span>
-<span class="cstat-no" title="statement not covered">      this.options = options != null ? options : {};</span>
-<span class="cstat-no" title="statement not covered">      this._initErrors = bind(this._initErrors, this);</span>
-<span class="cstat-no" title="statement not covered">      this._error = bind(this._error, this);</span>
-<span class="cstat-no" title="statement not covered">      this._getValLength = bind(this._getValLength, this);</span>
-<span class="cstat-no" title="statement not covered">      this._wrap = bind(this._wrap, this);</span>
-<span class="cstat-no" title="statement not covered">      this._isInvalidKey = bind(this._isInvalidKey, this);</span>
-<span class="cstat-no" title="statement not covered">      this._check = bind(this._check, this);</span>
-<span class="cstat-no" title="statement not covered">      this._checkData = bind(this._checkData, this);</span>
-<span class="cstat-no" title="statement not covered">      this.close = bind(this.close, this);</span>
-<span class="cstat-no" title="statement not covered">      this.flushAll = bind(this.flushAll, this);</span>
-<span class="cstat-no" title="statement not covered">      this.getStats = bind(this.getStats, this);</span>
-<span class="cstat-no" title="statement not covered">      this.keys = bind(this.keys, this);</span>
-<span class="cstat-no" title="statement not covered">      this.getTtl = bind(this.getTtl, this);</span>
-<span class="cstat-no" title="statement not covered">      this.ttl = bind(this.ttl, this);</span>
-<span class="cstat-no" title="statement not covered">      this.del = bind(this.del, this);</span>
-<span class="cstat-no" title="statement not covered">      this.set = bind(this.set, this);</span>
-<span class="cstat-no" title="statement not covered">      this.mget = bind(this.mget, this);</span>
-<span class="cstat-no" title="statement not covered">      this.get = bind(this.get, this);</span>
-<span class="cstat-no" title="statement not covered">      this._initErrors();</span>
-<span class="cstat-no" title="statement not covered">      this.data = {};</span>
-<span class="cstat-no" title="statement not covered">      this.options = _assignIn({</span>
+<span class="fstat-no" title="function not covered" >    function NodeCache(options) {</span>
+<span class="cstat-no" title="statement not covered" >      this.options = options != null ? options : {};</span>
+<span class="cstat-no" title="statement not covered" >      this._initErrors = bind(this._initErrors, this);</span>
+<span class="cstat-no" title="statement not covered" >      this._error = bind(this._error, this);</span>
+<span class="cstat-no" title="statement not covered" >      this._getValLength = bind(this._getValLength, this);</span>
+<span class="cstat-no" title="statement not covered" >      this._wrap = bind(this._wrap, this);</span>
+<span class="cstat-no" title="statement not covered" >      this._isInvalidKey = bind(this._isInvalidKey, this);</span>
+<span class="cstat-no" title="statement not covered" >      this._check = bind(this._check, this);</span>
+<span class="cstat-no" title="statement not covered" >      this._checkData = bind(this._checkData, this);</span>
+<span class="cstat-no" title="statement not covered" >      this.close = bind(this.close, this);</span>
+<span class="cstat-no" title="statement not covered" >      this.flushAll = bind(this.flushAll, this);</span>
+<span class="cstat-no" title="statement not covered" >      this.getStats = bind(this.getStats, this);</span>
+<span class="cstat-no" title="statement not covered" >      this.keys = bind(this.keys, this);</span>
+<span class="cstat-no" title="statement not covered" >      this.getTtl = bind(this.getTtl, this);</span>
+<span class="cstat-no" title="statement not covered" >      this.ttl = bind(this.ttl, this);</span>
+<span class="cstat-no" title="statement not covered" >      this.del = bind(this.del, this);</span>
+<span class="cstat-no" title="statement not covered" >      this.set = bind(this.set, this);</span>
+<span class="cstat-no" title="statement not covered" >      this.mget = bind(this.mget, this);</span>
+<span class="cstat-no" title="statement not covered" >      this.get = bind(this.get, this);</span>
+<span class="cstat-no" title="statement not covered" >      this._initErrors();</span>
+<span class="cstat-no" title="statement not covered" >      this.data = {};</span>
+<span class="cstat-no" title="statement not covered" >      this.options = _assignIn({</span>
         forceString: false,
         objectValueSize: 80,
         arrayValueSize: 40,
@@ -1244,402 +1246,402 @@
         useClones: true,
         errorOnMissing: false
       }, this.options);
-<span class="cstat-no" title="statement not covered">      this.stats = {</span>
+<span class="cstat-no" title="statement not covered" >      this.stats = {</span>
         hits: 0,
         misses: 0,
         keys: 0,
         ksize: 0,
         vsize: 0
       };
-<span class="cstat-no" title="statement not covered">      this.validKeyTypes = ["string", "number"];</span>
-<span class="cstat-no" title="statement not covered">      this._checkData();</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >      this.validKeyTypes = ["string", "number"];</span>
+<span class="cstat-no" title="statement not covered" >      this._checkData();</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-    NodeCache.prototype.get = <span class="fstat-no" title="function not covered">function(key, cb, errorOnMissing) {</span>
-<span class="cstat-no" title="statement not covered">      var _err, _ret, err;</span>
-<span class="cstat-no" title="statement not covered">      if (typeof cb === "boolean" &amp;&amp; arguments.length === 2) {</span>
-<span class="cstat-no" title="statement not covered">        errorOnMissing = cb;</span>
-<span class="cstat-no" title="statement not covered">        cb = void 0;</span>
+    NodeCache.prototype.get = <span class="fstat-no" title="function not covered" >function(key, cb, errorOnMissing) {</span>
+<span class="cstat-no" title="statement not covered" >      var _err, _ret, err;</span>
+<span class="cstat-no" title="statement not covered" >      if (typeof cb === "boolean" &amp;&amp; arguments.length === 2) {</span>
+<span class="cstat-no" title="statement not covered" >        errorOnMissing = cb;</span>
+<span class="cstat-no" title="statement not covered" >        cb = void 0;</span>
       }
-<span class="cstat-no" title="statement not covered">      if ((err = this._isInvalidKey(key)) != null) {</span>
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(err);</span>
-<span class="cstat-no" title="statement not covered">          return;</span>
+<span class="cstat-no" title="statement not covered" >      if ((err = this._isInvalidKey(key)) != null) {</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(err);</span>
+<span class="cstat-no" title="statement not covered" >          return;</span>
         } else {
-<span class="cstat-no" title="statement not covered">          throw err;</span>
+<span class="cstat-no" title="statement not covered" >          throw err;</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      if ((this.data[key] != null) &amp;&amp; this._check(key, this.data[key])) {</span>
-<span class="cstat-no" title="statement not covered">        this.stats.hits++;</span>
-<span class="cstat-no" title="statement not covered">        _ret = this._unwrap(this.data[key]);</span>
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(null, _ret);</span>
+<span class="cstat-no" title="statement not covered" >      if ((this.data[key] != null) &amp;&amp; this._check(key, this.data[key])) {</span>
+<span class="cstat-no" title="statement not covered" >        this.stats.hits++;</span>
+<span class="cstat-no" title="statement not covered" >        _ret = this._unwrap(this.data[key]);</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(null, _ret);</span>
         }
-<span class="cstat-no" title="statement not covered">        return _ret;</span>
+<span class="cstat-no" title="statement not covered" >        return _ret;</span>
       } else {
-<span class="cstat-no" title="statement not covered">        this.stats.misses++;</span>
-<span class="cstat-no" title="statement not covered">        if (this.options.errorOnMissing || errorOnMissing) {</span>
-<span class="cstat-no" title="statement not covered">          _err = this._error("ENOTFOUND", {</span>
+<span class="cstat-no" title="statement not covered" >        this.stats.misses++;</span>
+<span class="cstat-no" title="statement not covered" >        if (this.options.errorOnMissing || errorOnMissing) {</span>
+<span class="cstat-no" title="statement not covered" >          _err = this._error("ENOTFOUND", {</span>
             key: key
           }, cb);
-<span class="cstat-no" title="statement not covered">          if (_err != null) {</span>
-<span class="cstat-no" title="statement not covered">            throw _err;</span>
+<span class="cstat-no" title="statement not covered" >          if (_err != null) {</span>
+<span class="cstat-no" title="statement not covered" >            throw _err;</span>
           }
-<span class="cstat-no" title="statement not covered">          return;</span>
+<span class="cstat-no" title="statement not covered" >          return;</span>
         } else {
-<span class="cstat-no" title="statement not covered">          if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">            cb(null, void 0);</span>
+<span class="cstat-no" title="statement not covered" >          if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >            cb(null, void 0);</span>
           }
         }
-<span class="cstat-no" title="statement not covered">        return void 0;</span>
+<span class="cstat-no" title="statement not covered" >        return void 0;</span>
       }
     };
 &nbsp;
-    NodeCache.prototype.mget = <span class="fstat-no" title="function not covered">function(keys, cb) {</span>
-<span class="cstat-no" title="statement not covered">      var _err, err, i, key, len, oRet;</span>
-<span class="cstat-no" title="statement not covered">      if (!_isArray(keys)) {</span>
-<span class="cstat-no" title="statement not covered">        _err = this._error("EKEYSTYPE");</span>
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(_err);</span>
+    NodeCache.prototype.mget = <span class="fstat-no" title="function not covered" >function(keys, cb) {</span>
+<span class="cstat-no" title="statement not covered" >      var _err, err, i, key, len, oRet;</span>
+<span class="cstat-no" title="statement not covered" >      if (!_isArray(keys)) {</span>
+<span class="cstat-no" title="statement not covered" >        _err = this._error("EKEYSTYPE");</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(_err);</span>
         }
-<span class="cstat-no" title="statement not covered">        return _err;</span>
+<span class="cstat-no" title="statement not covered" >        return _err;</span>
       }
-<span class="cstat-no" title="statement not covered">      oRet = {};</span>
-<span class="cstat-no" title="statement not covered">      for (i = 0, len = keys.length; i &lt; len; i++) {</span>
-<span class="cstat-no" title="statement not covered">        key = keys[i];</span>
-<span class="cstat-no" title="statement not covered">        if ((err = this._isInvalidKey(key)) != null) {</span>
-<span class="cstat-no" title="statement not covered">          if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">            cb(err);</span>
-<span class="cstat-no" title="statement not covered">            return;</span>
+<span class="cstat-no" title="statement not covered" >      oRet = {};</span>
+<span class="cstat-no" title="statement not covered" >      for (i = 0, len = keys.length; i &lt; len; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        key = keys[i];</span>
+<span class="cstat-no" title="statement not covered" >        if ((err = this._isInvalidKey(key)) != null) {</span>
+<span class="cstat-no" title="statement not covered" >          if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >            cb(err);</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
           } else {
-<span class="cstat-no" title="statement not covered">            throw err;</span>
+<span class="cstat-no" title="statement not covered" >            throw err;</span>
           }
         }
-<span class="cstat-no" title="statement not covered">        if ((this.data[key] != null) &amp;&amp; this._check(key, this.data[key])) {</span>
-<span class="cstat-no" title="statement not covered">          this.stats.hits++;</span>
-<span class="cstat-no" title="statement not covered">          oRet[key] = this._unwrap(this.data[key]);</span>
+<span class="cstat-no" title="statement not covered" >        if ((this.data[key] != null) &amp;&amp; this._check(key, this.data[key])) {</span>
+<span class="cstat-no" title="statement not covered" >          this.stats.hits++;</span>
+<span class="cstat-no" title="statement not covered" >          oRet[key] = this._unwrap(this.data[key]);</span>
         } else {
-<span class="cstat-no" title="statement not covered">          this.stats.misses++;</span>
+<span class="cstat-no" title="statement not covered" >          this.stats.misses++;</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">        cb(null, oRet);</span>
+<span class="cstat-no" title="statement not covered" >      if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >        cb(null, oRet);</span>
       }
-<span class="cstat-no" title="statement not covered">      return oRet;</span>
+<span class="cstat-no" title="statement not covered" >      return oRet;</span>
     };
 &nbsp;
-    NodeCache.prototype.set = <span class="fstat-no" title="function not covered">function(key, value, ttl, cb) {</span>
-<span class="cstat-no" title="statement not covered">      var err, existent;</span>
-<span class="cstat-no" title="statement not covered">      if (this.options.forceString &amp;&amp; !_isString(value)) {</span>
-<span class="cstat-no" title="statement not covered">        value = JSON.stringify(value);</span>
+    NodeCache.prototype.set = <span class="fstat-no" title="function not covered" >function(key, value, ttl, cb) {</span>
+<span class="cstat-no" title="statement not covered" >      var err, existent;</span>
+<span class="cstat-no" title="statement not covered" >      if (this.options.forceString &amp;&amp; !_isString(value)) {</span>
+<span class="cstat-no" title="statement not covered" >        value = JSON.stringify(value);</span>
       }
-<span class="cstat-no" title="statement not covered">      if (arguments.length === 3 &amp;&amp; _isFunction(ttl)) {</span>
-<span class="cstat-no" title="statement not covered">        cb = ttl;</span>
-<span class="cstat-no" title="statement not covered">        ttl = this.options.stdTTL;</span>
+<span class="cstat-no" title="statement not covered" >      if (arguments.length === 3 &amp;&amp; _isFunction(ttl)) {</span>
+<span class="cstat-no" title="statement not covered" >        cb = ttl;</span>
+<span class="cstat-no" title="statement not covered" >        ttl = this.options.stdTTL;</span>
       }
-<span class="cstat-no" title="statement not covered">      if ((err = this._isInvalidKey(key)) != null) {</span>
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(err);</span>
-<span class="cstat-no" title="statement not covered">          return;</span>
+<span class="cstat-no" title="statement not covered" >      if ((err = this._isInvalidKey(key)) != null) {</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(err);</span>
+<span class="cstat-no" title="statement not covered" >          return;</span>
         } else {
-<span class="cstat-no" title="statement not covered">          throw err;</span>
+<span class="cstat-no" title="statement not covered" >          throw err;</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      existent = false;</span>
-<span class="cstat-no" title="statement not covered">      if (this.data[key]) {</span>
-<span class="cstat-no" title="statement not covered">        existent = true;</span>
-<span class="cstat-no" title="statement not covered">        this.stats.vsize -= this._getValLength(this._unwrap(this.data[key], false));</span>
+<span class="cstat-no" title="statement not covered" >      existent = false;</span>
+<span class="cstat-no" title="statement not covered" >      if (this.data[key]) {</span>
+<span class="cstat-no" title="statement not covered" >        existent = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.stats.vsize -= this._getValLength(this._unwrap(this.data[key], false));</span>
       }
-<span class="cstat-no" title="statement not covered">      this.data[key] = this._wrap(value, ttl);</span>
-<span class="cstat-no" title="statement not covered">      this.stats.vsize += this._getValLength(value);</span>
-<span class="cstat-no" title="statement not covered">      if (!existent) {</span>
-<span class="cstat-no" title="statement not covered">        this.stats.ksize += this._getKeyLength(key);</span>
-<span class="cstat-no" title="statement not covered">        this.stats.keys++;</span>
+<span class="cstat-no" title="statement not covered" >      this.data[key] = this._wrap(value, ttl);</span>
+<span class="cstat-no" title="statement not covered" >      this.stats.vsize += this._getValLength(value);</span>
+<span class="cstat-no" title="statement not covered" >      if (!existent) {</span>
+<span class="cstat-no" title="statement not covered" >        this.stats.ksize += this._getKeyLength(key);</span>
+<span class="cstat-no" title="statement not covered" >        this.stats.keys++;</span>
       }
-<span class="cstat-no" title="statement not covered">      this.emit("set", key, value);</span>
-<span class="cstat-no" title="statement not covered">      if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">        cb(null, true);</span>
+<span class="cstat-no" title="statement not covered" >      this.emit("set", key, value);</span>
+<span class="cstat-no" title="statement not covered" >      if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >        cb(null, true);</span>
       }
-<span class="cstat-no" title="statement not covered">      return true;</span>
+<span class="cstat-no" title="statement not covered" >      return true;</span>
     };
 &nbsp;
-    NodeCache.prototype.del = <span class="fstat-no" title="function not covered">function(keys, cb) {</span>
-<span class="cstat-no" title="statement not covered">      var delCount, err, i, key, len, oldVal;</span>
-<span class="cstat-no" title="statement not covered">      if (!_isArray(keys)) {</span>
-<span class="cstat-no" title="statement not covered">        keys = [keys];</span>
+    NodeCache.prototype.del = <span class="fstat-no" title="function not covered" >function(keys, cb) {</span>
+<span class="cstat-no" title="statement not covered" >      var delCount, err, i, key, len, oldVal;</span>
+<span class="cstat-no" title="statement not covered" >      if (!_isArray(keys)) {</span>
+<span class="cstat-no" title="statement not covered" >        keys = [keys];</span>
       }
-<span class="cstat-no" title="statement not covered">      delCount = 0;</span>
-<span class="cstat-no" title="statement not covered">      for (i = 0, len = keys.length; i &lt; len; i++) {</span>
-<span class="cstat-no" title="statement not covered">        key = keys[i];</span>
-<span class="cstat-no" title="statement not covered">        if ((err = this._isInvalidKey(key)) != null) {</span>
-<span class="cstat-no" title="statement not covered">          if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">            cb(err);</span>
-<span class="cstat-no" title="statement not covered">            return;</span>
+<span class="cstat-no" title="statement not covered" >      delCount = 0;</span>
+<span class="cstat-no" title="statement not covered" >      for (i = 0, len = keys.length; i &lt; len; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        key = keys[i];</span>
+<span class="cstat-no" title="statement not covered" >        if ((err = this._isInvalidKey(key)) != null) {</span>
+<span class="cstat-no" title="statement not covered" >          if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >            cb(err);</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
           } else {
-<span class="cstat-no" title="statement not covered">            throw err;</span>
+<span class="cstat-no" title="statement not covered" >            throw err;</span>
           }
         }
-<span class="cstat-no" title="statement not covered">        if (this.data[key] != null) {</span>
-<span class="cstat-no" title="statement not covered">          this.stats.vsize -= this._getValLength(this._unwrap(this.data[key], false));</span>
-<span class="cstat-no" title="statement not covered">          this.stats.ksize -= this._getKeyLength(key);</span>
-<span class="cstat-no" title="statement not covered">          this.stats.keys--;</span>
-<span class="cstat-no" title="statement not covered">          delCount++;</span>
-<span class="cstat-no" title="statement not covered">          oldVal = this.data[key];</span>
-<span class="cstat-no" title="statement not covered">          delete this.data[key];</span>
-<span class="cstat-no" title="statement not covered">          this.emit("del", key, oldVal.v);</span>
+<span class="cstat-no" title="statement not covered" >        if (this.data[key] != null) {</span>
+<span class="cstat-no" title="statement not covered" >          this.stats.vsize -= this._getValLength(this._unwrap(this.data[key], false));</span>
+<span class="cstat-no" title="statement not covered" >          this.stats.ksize -= this._getKeyLength(key);</span>
+<span class="cstat-no" title="statement not covered" >          this.stats.keys--;</span>
+<span class="cstat-no" title="statement not covered" >          delCount++;</span>
+<span class="cstat-no" title="statement not covered" >          oldVal = this.data[key];</span>
+<span class="cstat-no" title="statement not covered" >          delete this.data[key];</span>
+<span class="cstat-no" title="statement not covered" >          this.emit("del", key, oldVal.v);</span>
         } else {
-<span class="cstat-no" title="statement not covered">          this.stats.misses++;</span>
+<span class="cstat-no" title="statement not covered" >          this.stats.misses++;</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">        cb(null, delCount);</span>
+<span class="cstat-no" title="statement not covered" >      if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >        cb(null, delCount);</span>
       }
-<span class="cstat-no" title="statement not covered">      return delCount;</span>
+<span class="cstat-no" title="statement not covered" >      return delCount;</span>
     };
 &nbsp;
-    NodeCache.prototype.ttl = <span class="fstat-no" title="function not covered">function() {</span>
-<span class="cstat-no" title="statement not covered">      var arg, args, cb, err, i, key, len, ttl;</span>
-<span class="cstat-no" title="statement not covered">      key = arguments[0], args = 2 &lt;= arguments.length ? slice.call(arguments, 1) : [];</span>
-<span class="cstat-no" title="statement not covered">      for (i = 0, len = args.length; i &lt; len; i++) {</span>
-<span class="cstat-no" title="statement not covered">        arg = args[i];</span>
-<span class="cstat-no" title="statement not covered">        switch (typeof arg) {</span>
+    NodeCache.prototype.ttl = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      var arg, args, cb, err, i, key, len, ttl;</span>
+<span class="cstat-no" title="statement not covered" >      key = arguments[0], args = 2 &lt;= arguments.length ? slice.call(arguments, 1) : [];</span>
+<span class="cstat-no" title="statement not covered" >      for (i = 0, len = args.length; i &lt; len; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        arg = args[i];</span>
+<span class="cstat-no" title="statement not covered" >        switch (typeof arg) {</span>
           case "number":
-<span class="cstat-no" title="statement not covered">            ttl = arg;</span>
-<span class="cstat-no" title="statement not covered">            break;</span>
+<span class="cstat-no" title="statement not covered" >            ttl = arg;</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
           case "function":
-<span class="cstat-no" title="statement not covered">            cb = arg;</span>
+<span class="cstat-no" title="statement not covered" >            cb = arg;</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      ttl || (ttl = this.options.stdTTL);</span>
-<span class="cstat-no" title="statement not covered">      if (!key) {</span>
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(null, false);</span>
+<span class="cstat-no" title="statement not covered" >      ttl || (ttl = this.options.stdTTL);</span>
+<span class="cstat-no" title="statement not covered" >      if (!key) {</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(null, false);</span>
         }
-<span class="cstat-no" title="statement not covered">        return false;</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
       }
-<span class="cstat-no" title="statement not covered">      if ((err = this._isInvalidKey(key)) != null) {</span>
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(err);</span>
-<span class="cstat-no" title="statement not covered">          return;</span>
+<span class="cstat-no" title="statement not covered" >      if ((err = this._isInvalidKey(key)) != null) {</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(err);</span>
+<span class="cstat-no" title="statement not covered" >          return;</span>
         } else {
-<span class="cstat-no" title="statement not covered">          throw err;</span>
+<span class="cstat-no" title="statement not covered" >          throw err;</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      if ((this.data[key] != null) &amp;&amp; this._check(key, this.data[key])) {</span>
-<span class="cstat-no" title="statement not covered">        if (ttl &gt;= 0) {</span>
-<span class="cstat-no" title="statement not covered">          this.data[key] = this._wrap(this.data[key].v, ttl, false);</span>
+<span class="cstat-no" title="statement not covered" >      if ((this.data[key] != null) &amp;&amp; this._check(key, this.data[key])) {</span>
+<span class="cstat-no" title="statement not covered" >        if (ttl &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered" >          this.data[key] = this._wrap(this.data[key].v, ttl, false);</span>
         } else {
-<span class="cstat-no" title="statement not covered">          this.del(key);</span>
+<span class="cstat-no" title="statement not covered" >          this.del(key);</span>
         }
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(null, true);</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(null, true);</span>
         }
-<span class="cstat-no" title="statement not covered">        return true;</span>
+<span class="cstat-no" title="statement not covered" >        return true;</span>
       } else {
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(null, false);</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(null, false);</span>
         }
-<span class="cstat-no" title="statement not covered">        return false;</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
       }
     };
 &nbsp;
-    NodeCache.prototype.getTtl = <span class="fstat-no" title="function not covered">function(key, cb) {</span>
-<span class="cstat-no" title="statement not covered">      var _ttl, err;</span>
-<span class="cstat-no" title="statement not covered">      if (!key) {</span>
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(null, void 0);</span>
+    NodeCache.prototype.getTtl = <span class="fstat-no" title="function not covered" >function(key, cb) {</span>
+<span class="cstat-no" title="statement not covered" >      var _ttl, err;</span>
+<span class="cstat-no" title="statement not covered" >      if (!key) {</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(null, void 0);</span>
         }
-<span class="cstat-no" title="statement not covered">        return void 0;</span>
+<span class="cstat-no" title="statement not covered" >        return void 0;</span>
       }
-<span class="cstat-no" title="statement not covered">      if ((err = this._isInvalidKey(key)) != null) {</span>
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(err);</span>
-<span class="cstat-no" title="statement not covered">          return;</span>
+<span class="cstat-no" title="statement not covered" >      if ((err = this._isInvalidKey(key)) != null) {</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(err);</span>
+<span class="cstat-no" title="statement not covered" >          return;</span>
         } else {
-<span class="cstat-no" title="statement not covered">          throw err;</span>
+<span class="cstat-no" title="statement not covered" >          throw err;</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      if ((this.data[key] != null) &amp;&amp; this._check(key, this.data[key])) {</span>
-<span class="cstat-no" title="statement not covered">        _ttl = this.data[key].t;</span>
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(null, _ttl);</span>
+<span class="cstat-no" title="statement not covered" >      if ((this.data[key] != null) &amp;&amp; this._check(key, this.data[key])) {</span>
+<span class="cstat-no" title="statement not covered" >        _ttl = this.data[key].t;</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(null, _ttl);</span>
         }
-<span class="cstat-no" title="statement not covered">        return _ttl;</span>
+<span class="cstat-no" title="statement not covered" >        return _ttl;</span>
       } else {
-<span class="cstat-no" title="statement not covered">        if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">          cb(null, void 0);</span>
+<span class="cstat-no" title="statement not covered" >        if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(null, void 0);</span>
         }
-<span class="cstat-no" title="statement not covered">        return void 0;</span>
+<span class="cstat-no" title="statement not covered" >        return void 0;</span>
       }
     };
 &nbsp;
-    NodeCache.prototype.keys = <span class="fstat-no" title="function not covered">function(cb) {</span>
-<span class="cstat-no" title="statement not covered">      var _keys;</span>
-<span class="cstat-no" title="statement not covered">      _keys = Object.keys(this.data);</span>
-<span class="cstat-no" title="statement not covered">      if (cb != null) {</span>
-<span class="cstat-no" title="statement not covered">        cb(null, _keys);</span>
+    NodeCache.prototype.keys = <span class="fstat-no" title="function not covered" >function(cb) {</span>
+<span class="cstat-no" title="statement not covered" >      var _keys;</span>
+<span class="cstat-no" title="statement not covered" >      _keys = Object.keys(this.data);</span>
+<span class="cstat-no" title="statement not covered" >      if (cb != null) {</span>
+<span class="cstat-no" title="statement not covered" >        cb(null, _keys);</span>
       }
-<span class="cstat-no" title="statement not covered">      return _keys;</span>
+<span class="cstat-no" title="statement not covered" >      return _keys;</span>
     };
 &nbsp;
-    NodeCache.prototype.getStats = <span class="fstat-no" title="function not covered">function() {</span>
-<span class="cstat-no" title="statement not covered">      return this.stats;</span>
+    NodeCache.prototype.getStats = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      return this.stats;</span>
     };
 &nbsp;
-    NodeCache.prototype.flushAll = <span class="fstat-no" title="function not covered">function(_startPeriod) {</span>
-<span class="cstat-no" title="statement not covered">      if (_startPeriod == null) {</span>
-<span class="cstat-no" title="statement not covered">        _startPeriod = true;</span>
+    NodeCache.prototype.flushAll = <span class="fstat-no" title="function not covered" >function(_startPeriod) {</span>
+<span class="cstat-no" title="statement not covered" >      if (_startPeriod == null) {</span>
+<span class="cstat-no" title="statement not covered" >        _startPeriod = true;</span>
       }
-<span class="cstat-no" title="statement not covered">      this.data = {};</span>
-<span class="cstat-no" title="statement not covered">      this.stats = {</span>
+<span class="cstat-no" title="statement not covered" >      this.data = {};</span>
+<span class="cstat-no" title="statement not covered" >      this.stats = {</span>
         hits: 0,
         misses: 0,
         keys: 0,
         ksize: 0,
         vsize: 0
       };
-<span class="cstat-no" title="statement not covered">      this._killCheckPeriod();</span>
-<span class="cstat-no" title="statement not covered">      this._checkData(_startPeriod);</span>
-<span class="cstat-no" title="statement not covered">      this.emit("flush");</span>
+<span class="cstat-no" title="statement not covered" >      this._killCheckPeriod();</span>
+<span class="cstat-no" title="statement not covered" >      this._checkData(_startPeriod);</span>
+<span class="cstat-no" title="statement not covered" >      this.emit("flush");</span>
     };
 &nbsp;
-    NodeCache.prototype.close = <span class="fstat-no" title="function not covered">function() {</span>
-<span class="cstat-no" title="statement not covered">      this._killCheckPeriod();</span>
+    NodeCache.prototype.close = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      this._killCheckPeriod();</span>
     };
 &nbsp;
-    NodeCache.prototype._checkData = <span class="fstat-no" title="function not covered">function(startPeriod) {</span>
-<span class="cstat-no" title="statement not covered">      var key, ref, value;</span>
-<span class="cstat-no" title="statement not covered">      if (startPeriod == null) {</span>
-<span class="cstat-no" title="statement not covered">        startPeriod = true;</span>
+    NodeCache.prototype._checkData = <span class="fstat-no" title="function not covered" >function(startPeriod) {</span>
+<span class="cstat-no" title="statement not covered" >      var key, ref, value;</span>
+<span class="cstat-no" title="statement not covered" >      if (startPeriod == null) {</span>
+<span class="cstat-no" title="statement not covered" >        startPeriod = true;</span>
       }
-<span class="cstat-no" title="statement not covered">      ref = this.data;</span>
-<span class="cstat-no" title="statement not covered">      for (key in ref) {</span>
-<span class="cstat-no" title="statement not covered">        value = ref[key];</span>
-<span class="cstat-no" title="statement not covered">        this._check(key, value);</span>
+<span class="cstat-no" title="statement not covered" >      ref = this.data;</span>
+<span class="cstat-no" title="statement not covered" >      for (key in ref) {</span>
+<span class="cstat-no" title="statement not covered" >        value = ref[key];</span>
+<span class="cstat-no" title="statement not covered" >        this._check(key, value);</span>
       }
-<span class="cstat-no" title="statement not covered">      if (startPeriod &amp;&amp; this.options.checkperiod &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered">        this.checkTimeout = setTimeout(this._checkData, this.options.checkperiod * 1000, startPeriod);</span>
-<span class="cstat-no" title="statement not covered">        if (this.checkTimeout.unref != null) {</span>
-<span class="cstat-no" title="statement not covered">          this.checkTimeout.unref();</span>
+<span class="cstat-no" title="statement not covered" >      if (startPeriod &amp;&amp; this.options.checkperiod &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        this.checkTimeout = setTimeout(this._checkData, this.options.checkperiod * 1000, startPeriod);</span>
+<span class="cstat-no" title="statement not covered" >        if (this.checkTimeout.unref != null) {</span>
+<span class="cstat-no" title="statement not covered" >          this.checkTimeout.unref();</span>
         }
       }
     };
 &nbsp;
-    NodeCache.prototype._killCheckPeriod = <span class="fstat-no" title="function not covered">function() {</span>
-<span class="cstat-no" title="statement not covered">      if (this.checkTimeout != null) {</span>
-<span class="cstat-no" title="statement not covered">        return clearTimeout(this.checkTimeout);</span>
+    NodeCache.prototype._killCheckPeriod = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      if (this.checkTimeout != null) {</span>
+<span class="cstat-no" title="statement not covered" >        return clearTimeout(this.checkTimeout);</span>
       }
     };
 &nbsp;
-    NodeCache.prototype._check = <span class="fstat-no" title="function not covered">function(key, data) {</span>
-<span class="cstat-no" title="statement not covered">      if (data.t !== 0 &amp;&amp; data.t &lt; Date.now()) {</span>
-<span class="cstat-no" title="statement not covered">        this.del(key);</span>
-<span class="cstat-no" title="statement not covered">        this.emit("expired", key, this._unwrap(data));</span>
-<span class="cstat-no" title="statement not covered">        return false;</span>
+    NodeCache.prototype._check = <span class="fstat-no" title="function not covered" >function(key, data) {</span>
+<span class="cstat-no" title="statement not covered" >      if (data.t !== 0 &amp;&amp; data.t &lt; Date.now()) {</span>
+<span class="cstat-no" title="statement not covered" >        this.del(key);</span>
+<span class="cstat-no" title="statement not covered" >        this.emit("expired", key, this._unwrap(data));</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
       } else {
-<span class="cstat-no" title="statement not covered">        return true;</span>
+<span class="cstat-no" title="statement not covered" >        return true;</span>
       }
     };
 &nbsp;
-    NodeCache.prototype._isInvalidKey = <span class="fstat-no" title="function not covered">function(key) {</span>
-<span class="cstat-no" title="statement not covered">      var ref;</span>
-<span class="cstat-no" title="statement not covered">      if (ref = typeof key, indexOf.call(this.validKeyTypes, ref) &lt; 0) {</span>
-<span class="cstat-no" title="statement not covered">        return this._error("EKEYTYPE", {</span>
+    NodeCache.prototype._isInvalidKey = <span class="fstat-no" title="function not covered" >function(key) {</span>
+<span class="cstat-no" title="statement not covered" >      var ref;</span>
+<span class="cstat-no" title="statement not covered" >      if (ref = typeof key, indexOf.call(this.validKeyTypes, ref) &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        return this._error("EKEYTYPE", {</span>
           type: typeof key
         });
       }
     };
 &nbsp;
-    NodeCache.prototype._wrap = <span class="fstat-no" title="function not covered">function(value, ttl, asClone) {</span>
-<span class="cstat-no" title="statement not covered">      var livetime, now, oReturn, ttlMultiplicator;</span>
-<span class="cstat-no" title="statement not covered">      if (asClone == null) {</span>
-<span class="cstat-no" title="statement not covered">        asClone = true;</span>
+    NodeCache.prototype._wrap = <span class="fstat-no" title="function not covered" >function(value, ttl, asClone) {</span>
+<span class="cstat-no" title="statement not covered" >      var livetime, now, oReturn, ttlMultiplicator;</span>
+<span class="cstat-no" title="statement not covered" >      if (asClone == null) {</span>
+<span class="cstat-no" title="statement not covered" >        asClone = true;</span>
       }
-<span class="cstat-no" title="statement not covered">      if (!this.options.useClones) {</span>
-<span class="cstat-no" title="statement not covered">        asClone = false;</span>
+<span class="cstat-no" title="statement not covered" >      if (!this.options.useClones) {</span>
+<span class="cstat-no" title="statement not covered" >        asClone = false;</span>
       }
-<span class="cstat-no" title="statement not covered">      now = Date.now();</span>
-<span class="cstat-no" title="statement not covered">      livetime = 0;</span>
-<span class="cstat-no" title="statement not covered">      ttlMultiplicator = 1000;</span>
-<span class="cstat-no" title="statement not covered">      if (ttl === 0) {</span>
-<span class="cstat-no" title="statement not covered">        livetime = 0;</span>
-      } else <span class="cstat-no" title="statement not covered">if (ttl) {</span>
-<span class="cstat-no" title="statement not covered">        livetime = now + (ttl * ttlMultiplicator);</span>
+<span class="cstat-no" title="statement not covered" >      now = Date.now();</span>
+<span class="cstat-no" title="statement not covered" >      livetime = 0;</span>
+<span class="cstat-no" title="statement not covered" >      ttlMultiplicator = 1000;</span>
+<span class="cstat-no" title="statement not covered" >      if (ttl === 0) {</span>
+<span class="cstat-no" title="statement not covered" >        livetime = 0;</span>
+      } else <span class="cstat-no" title="statement not covered" >if (ttl) {</span>
+<span class="cstat-no" title="statement not covered" >        livetime = now + (ttl * ttlMultiplicator);</span>
       } else {
-<span class="cstat-no" title="statement not covered">        if (this.options.stdTTL === 0) {</span>
-<span class="cstat-no" title="statement not covered">          livetime = this.options.stdTTL;</span>
+<span class="cstat-no" title="statement not covered" >        if (this.options.stdTTL === 0) {</span>
+<span class="cstat-no" title="statement not covered" >          livetime = this.options.stdTTL;</span>
         } else {
-<span class="cstat-no" title="statement not covered">          livetime = now + (this.options.stdTTL * ttlMultiplicator);</span>
+<span class="cstat-no" title="statement not covered" >          livetime = now + (this.options.stdTTL * ttlMultiplicator);</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      return oReturn = {</span>
+<span class="cstat-no" title="statement not covered" >      return oReturn = {</span>
         t: livetime,
         v: asClone ? clone(value) : value
       };
     };
 &nbsp;
-    NodeCache.prototype._unwrap = <span class="fstat-no" title="function not covered">function(value, asClone) {</span>
-<span class="cstat-no" title="statement not covered">      if (asClone == null) {</span>
-<span class="cstat-no" title="statement not covered">        asClone = true;</span>
+    NodeCache.prototype._unwrap = <span class="fstat-no" title="function not covered" >function(value, asClone) {</span>
+<span class="cstat-no" title="statement not covered" >      if (asClone == null) {</span>
+<span class="cstat-no" title="statement not covered" >        asClone = true;</span>
       }
-<span class="cstat-no" title="statement not covered">      if (!this.options.useClones) {</span>
-<span class="cstat-no" title="statement not covered">        asClone = false;</span>
+<span class="cstat-no" title="statement not covered" >      if (!this.options.useClones) {</span>
+<span class="cstat-no" title="statement not covered" >        asClone = false;</span>
       }
-<span class="cstat-no" title="statement not covered">      if (value.v != null) {</span>
-<span class="cstat-no" title="statement not covered">        if (asClone) {</span>
-<span class="cstat-no" title="statement not covered">          return clone(value.v);</span>
+<span class="cstat-no" title="statement not covered" >      if (value.v != null) {</span>
+<span class="cstat-no" title="statement not covered" >        if (asClone) {</span>
+<span class="cstat-no" title="statement not covered" >          return clone(value.v);</span>
         } else {
-<span class="cstat-no" title="statement not covered">          return value.v;</span>
+<span class="cstat-no" title="statement not covered" >          return value.v;</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      return null;</span>
+<span class="cstat-no" title="statement not covered" >      return null;</span>
     };
 &nbsp;
-    NodeCache.prototype._getKeyLength = <span class="fstat-no" title="function not covered">function(key) {</span>
-<span class="cstat-no" title="statement not covered">      return key.length;</span>
+    NodeCache.prototype._getKeyLength = <span class="fstat-no" title="function not covered" >function(key) {</span>
+<span class="cstat-no" title="statement not covered" >      return key.length;</span>
     };
 &nbsp;
-    NodeCache.prototype._getValLength = <span class="fstat-no" title="function not covered">function(value) {</span>
-<span class="cstat-no" title="statement not covered">      if (_isString(value)) {</span>
-<span class="cstat-no" title="statement not covered">        return value.length;</span>
-      } else <span class="cstat-no" title="statement not covered">if (this.options.forceString) {</span>
-<span class="cstat-no" title="statement not covered">        return JSON.stringify(value).length;</span>
-      } else <span class="cstat-no" title="statement not covered">if (_isArray(value)) {</span>
-<span class="cstat-no" title="statement not covered">        return this.options.arrayValueSize * value.length;</span>
-      } else <span class="cstat-no" title="statement not covered">if (_isNumber(value)) {</span>
-<span class="cstat-no" title="statement not covered">        return 8;</span>
-      } else <span class="cstat-no" title="statement not covered">if (_isObject(value)) {</span>
-<span class="cstat-no" title="statement not covered">        return this.options.objectValueSize * _size(value);</span>
+    NodeCache.prototype._getValLength = <span class="fstat-no" title="function not covered" >function(value) {</span>
+<span class="cstat-no" title="statement not covered" >      if (_isString(value)) {</span>
+<span class="cstat-no" title="statement not covered" >        return value.length;</span>
+      } else <span class="cstat-no" title="statement not covered" >if (this.options.forceString) {</span>
+<span class="cstat-no" title="statement not covered" >        return JSON.stringify(value).length;</span>
+      } else <span class="cstat-no" title="statement not covered" >if (_isArray(value)) {</span>
+<span class="cstat-no" title="statement not covered" >        return this.options.arrayValueSize * value.length;</span>
+      } else <span class="cstat-no" title="statement not covered" >if (_isNumber(value)) {</span>
+<span class="cstat-no" title="statement not covered" >        return 8;</span>
+      } else <span class="cstat-no" title="statement not covered" >if (_isObject(value)) {</span>
+<span class="cstat-no" title="statement not covered" >        return this.options.objectValueSize * _size(value);</span>
       } else {
-<span class="cstat-no" title="statement not covered">        return 0;</span>
+<span class="cstat-no" title="statement not covered" >        return 0;</span>
       }
     };
 &nbsp;
-    NodeCache.prototype._error = <span class="fstat-no" title="function not covered">function(type, data, cb) {</span>
-<span class="cstat-no" title="statement not covered">      var error;</span>
-<span class="cstat-no" title="statement not covered">      if (data == null) {</span>
-<span class="cstat-no" title="statement not covered">        data = {};</span>
+    NodeCache.prototype._error = <span class="fstat-no" title="function not covered" >function(type, data, cb) {</span>
+<span class="cstat-no" title="statement not covered" >      var error;</span>
+<span class="cstat-no" title="statement not covered" >      if (data == null) {</span>
+<span class="cstat-no" title="statement not covered" >        data = {};</span>
       }
-<span class="cstat-no" title="statement not covered">      error = new Error();</span>
-<span class="cstat-no" title="statement not covered">      error.name = type;</span>
-<span class="cstat-no" title="statement not covered">      error.errorcode = type;</span>
-<span class="cstat-no" title="statement not covered">      error.message = this.ERRORS[type] != null ? this.ERRORS[type](data) : "-";</span>
-<span class="cstat-no" title="statement not covered">      error.data = data;</span>
-<span class="cstat-no" title="statement not covered">      if (cb &amp;&amp; _isFunction(cb)) {</span>
-<span class="cstat-no" title="statement not covered">        cb(error, null);</span>
+<span class="cstat-no" title="statement not covered" >      error = new Error();</span>
+<span class="cstat-no" title="statement not covered" >      error.name = type;</span>
+<span class="cstat-no" title="statement not covered" >      error.errorcode = type;</span>
+<span class="cstat-no" title="statement not covered" >      error.message = this.ERRORS[type] != null ? this.ERRORS[type](data) : "-";</span>
+<span class="cstat-no" title="statement not covered" >      error.data = data;</span>
+<span class="cstat-no" title="statement not covered" >      if (cb &amp;&amp; _isFunction(cb)) {</span>
+<span class="cstat-no" title="statement not covered" >        cb(error, null);</span>
       } else {
-<span class="cstat-no" title="statement not covered">        return error;</span>
+<span class="cstat-no" title="statement not covered" >        return error;</span>
       }
     };
 &nbsp;
-    NodeCache.prototype._initErrors = <span class="fstat-no" title="function not covered">function() {</span>
-<span class="cstat-no" title="statement not covered">      var _errMsg, _errT, ref;</span>
-<span class="cstat-no" title="statement not covered">      this.ERRORS = {};</span>
-<span class="cstat-no" title="statement not covered">      ref = this._ERRORS;</span>
-<span class="cstat-no" title="statement not covered">      for (_errT in ref) {</span>
-<span class="cstat-no" title="statement not covered">        _errMsg = ref[_errT];</span>
-<span class="cstat-no" title="statement not covered">        this.ERRORS[_errT] = _template(_errMsg);</span>
+    NodeCache.prototype._initErrors = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      var _errMsg, _errT, ref;</span>
+<span class="cstat-no" title="statement not covered" >      this.ERRORS = {};</span>
+<span class="cstat-no" title="statement not covered" >      ref = this._ERRORS;</span>
+<span class="cstat-no" title="statement not covered" >      for (_errT in ref) {</span>
+<span class="cstat-no" title="statement not covered" >        _errMsg = ref[_errT];</span>
+<span class="cstat-no" title="statement not covered" >        this.ERRORS[_errT] = _template(_errMsg);</span>
       }
     };
 &nbsp;
@@ -1656,11 +1658,10 @@
 }).call(this);
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 08:53:40 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 15:54:11 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
